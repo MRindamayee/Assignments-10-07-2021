@@ -1,0 +1,33 @@
+import java.util.*;
+class Impossible
+{
+public static void main(String args[])
+{
+String str;
+Scanner sc=new Scanner(System.in);
+System.out.print("Enter the string");
+str=sc.next();
+int u,l,d,s;
+char ch[]=str.toCharArray();
+u=0;
+l=0;
+d=0;
+s=0;
+for(int i=0;i<ch.length;i++)
+{
+if(Character.isUpperCase(ch[i]))
+u++;
+else if(Character.isLowerCase(ch[i]))
+l++;
+else if(Character.isDigit(ch[i]))
+d++;
+else
+s++;
+}
+if(u==l && l==d && d==s)
+System.out.println("YES");
+else
+System.out.println("NO");
+}
+}
+
